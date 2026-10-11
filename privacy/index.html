@@ -46,13 +46,13 @@
   <li>Şehir/ilçe adının gösterilmesi için Android'in konum adı çözümleme (Geocoder) hizmetiyle işlenir,</li>
   <li>Kıble yönü hesaplaması için yalnızca cihaz üzerinde kullanılır.</li>
 </ul>
-<p>Konumunuz bizim sunucularımıza gönderilmez, tarafımızca saklanmaz ve konum geçmişiniz tutulmaz. Uygulama konumu yalnızca açıkken kullanır; arka planda konum takibi yapılmaz. Konum izni vermek zorunlu değildir: izin vermezseniz şehir/ilçe adını elle arayabilirsiniz (aradığınız metin de aynı şekilde konum çözümlemesi için kullanılır).</p>
+<p>Konumunuz bizim sunucularımıza gönderilmez ve tarafımızca saklanmaz. Yalnızca son kullanılan konum, aşağıda açıklandığı gibi cihazınızda tutulur; konum geçmişi tutulmaz. Uygulama cihaz konumunu yalnızca açıkken alır; arka planda konum takibi yapılmaz. Hatırlatmaların ve widget'ın güncel kalması için, kaydedilen konumun koordinatları günde bir kez arka planda AlAdhan API'ye gönderilerek o günün vakitleri alınır. Konum izni vermek zorunlu değildir: izin vermezseniz şehir/ilçe adını elle arayabilirsiniz (aradığınız metin de aynı şekilde konum çözümlemesi için kullanılır).</p>
 
 <h3>Bildirimler</h3>
 <p>Ayarlar ekranında seçtiğiniz vakitlerden belirli dakikalar önce hatırlatma göstermek için bildirim izni istenir. Bildirimler tamamen cihaz üzerinde, Android'in alarm sistemiyle planlanır; bu amaçla hiçbir veri dışarıya gönderilmez. Bildirim iznini dilediğiniz zaman cihaz ayarlarından kapatabilirsiniz.</p>
 
 <h3>Cihazda saklanan veriler</h3>
-<p>Uygulama; dil tercihinizi, seçili şehir adını, günün namaz vakitlerini ve bildirim ayarlarınızı ana ekran widget'ı ve hatırlatmalar için yalnızca cihazınızda (SharedPreferences) saklar. Bu veriler bize iletilmez. Android'in yedekleme özelliği açıksa bu ayarlar Google hesabınızın cihaz yedeğine dahil edilebilir. Uygulamayı kaldırdığınızda veya uygulama verilerini temizlediğinizde silinir.</p>
+<p>Uygulama; dil tercihinizi, seçili şehir adını ve konumunun koordinatlarını (açılışta vakitleri hızlıca gösterebilmek için), günün namaz vakitlerini ve bildirim ayarlarınızı ana ekran widget'ı ve hatırlatmalar için yalnızca cihazınızda (SharedPreferences) saklar. Bu veriler bize iletilmez. Android'in yedekleme özelliği açıksa bu ayarlar Google hesabınızın cihaz yedeğine dahil edilebilir. Uygulamayı kaldırdığınızda veya uygulama verilerini temizlediğinizde silinir.</p>
 
 <h3>Pusula (sensörler)</h3>
 <p>Kıble pusulası için cihazın manyetometre, ivmeölçer ve dönüş sensörleri kullanılır. Sensör verileri yalnızca anlık olarak cihaz üzerinde işlenir, saklanmaz ve gönderilmez.</p>
@@ -126,13 +126,13 @@
   <li>processed by Android's Geocoder service to display your city/district name,</li>
   <li>used only on your device to calculate the Qibla direction.</li>
 </ul>
-<p>Your location is not sent to our servers, is not stored by us, and no location history is kept. The App only uses location while it is open; there is no background location tracking. Granting location permission is optional: you can search for a city manually instead (the text you search is used the same way for geocoding).</p>
+<p>Your location is not sent to our servers and is not stored by us. Only the last used location is kept on your device, as described below; no location history is kept. The App only reads your device location while it is open; there is no background location tracking. To keep reminders and the widget up to date, the coordinates of your saved location are sent to the AlAdhan API once a day in the background to get that day's prayer times. Granting location permission is optional: you can search for a city manually instead (the text you search is used the same way for geocoding).</p>
 
 <h3>Notifications</h3>
 <p>Notification permission is requested to show reminders a selected number of minutes before prayer times you choose in Settings. Reminders are scheduled entirely on your device using Android's alarm system; no data is sent anywhere for this purpose. You can turn notifications off at any time in your device settings.</p>
 
 <h3>Data stored on your device</h3>
-<p>The App stores your language preference, selected city name, today's prayer times and your reminder settings locally on your device (SharedPreferences) for the home screen widget and reminders. This data is never sent to us. If Android backup is enabled, these settings may be included in your Google account's device backup. They are deleted when you uninstall the App or clear its data.</p>
+<p>The App stores your language preference, selected city name and its coordinates (to show prayer times quickly on startup), today's prayer times and your reminder settings locally on your device (SharedPreferences) for the home screen widget and reminders. This data is never sent to us. If Android backup is enabled, these settings may be included in your Google account's device backup. They are deleted when you uninstall the App or clear its data.</p>
 
 <h3>Compass (sensors)</h3>
 <p>The Qibla compass uses the device's magnetometer, accelerometer and rotation sensors. Sensor readings are processed in real time on the device only and are neither stored nor transmitted.</p>
